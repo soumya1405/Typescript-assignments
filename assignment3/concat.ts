@@ -17,6 +17,6 @@ function concatKeysAndValues<T extends Inputtype>(obj: T) {
   for (const [key, value] of Object.entries(obj)) {
     text = text + `${key}: ${value}, `;
   }
-  console.log(text);
+  return text
 }
-concatKeysAndValues(Input);
+console.log(concatKeysAndValues(Input).slice(0,-2));
